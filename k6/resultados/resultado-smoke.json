@@ -1,0 +1,448 @@
+{
+    "setup_data": {
+        "authConfigured": true,
+        "autoLoginValidated": true,
+        "tokenFromEnv": false
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "setup": {
+                "name": "setup",
+                "path": "::setup",
+                "id": "5c0f8025f7e0b6654089e5b00e950f1a",
+                "groups": {},
+                "checks": {
+                        "auth login opcional: responde 2xx/3xx": {
+                            "name": "auth login opcional: responde 2xx/3xx",
+                            "path": "::setup::auth login opcional: responde 2xx/3xx",
+                            "id": "d86c4add1104d0bc7cc6825cbc04c825",
+                            "passes": 1,
+                            "fails": 0
+                        },
+                        "auth login opcional: sin 5xx/timeouts": {
+                            "name": "auth login opcional: sin 5xx/timeouts",
+                            "path": "::setup::auth login opcional: sin 5xx/timeouts",
+                            "id": "6bb44f64048fbe6d368d6cc54b3fcd68",
+                            "passes": 1,
+                            "fails": 0
+                        },
+                        "auth login opcional: ruta existe": {
+                            "fails": 0,
+                            "name": "auth login opcional: ruta existe",
+                            "path": "::setup::auth login opcional: ruta existe",
+                            "id": "46b5b1cf718402fe40d2566e117c9a94",
+                            "passes": 1
+                        }
+                    }
+            },
+            "frontend": {
+                "name": "frontend",
+                "path": "::frontend",
+                "id": "e1700640f0a092158d47197428832740",
+                "groups": {},
+                "checks": {
+                        "frontend /: responde 2xx/3xx": {
+                            "id": "512dd246b9eb47a3928acdbf0bc13620",
+                            "passes": 0,
+                            "fails": 168,
+                            "name": "frontend /: responde 2xx/3xx",
+                            "path": "::frontend::frontend /: responde 2xx/3xx"
+                        },
+                        "frontend /: sin 5xx/timeouts": {
+                            "name": "frontend /: sin 5xx/timeouts",
+                            "path": "::frontend::frontend /: sin 5xx/timeouts",
+                            "id": "4676831cebbe2f5a6a1836f817917939",
+                            "passes": 0,
+                            "fails": 168
+                        },
+                        "frontend /: ruta existe": {
+                            "fails": 0,
+                            "name": "frontend /: ruta existe",
+                            "path": "::frontend::frontend /: ruta existe",
+                            "id": "1a324f3acbc5aa6a96e777788977f7db",
+                            "passes": 168
+                        },
+                        "frontend /login: responde 2xx/3xx": {
+                            "name": "frontend /login: responde 2xx/3xx",
+                            "path": "::frontend::frontend /login: responde 2xx/3xx",
+                            "id": "e3a368b0b73ce54b1cdd7139fce2e3d5",
+                            "passes": 0,
+                            "fails": 168
+                        },
+                        "frontend /login: sin 5xx/timeouts": {
+                            "passes": 0,
+                            "fails": 168,
+                            "name": "frontend /login: sin 5xx/timeouts",
+                            "path": "::frontend::frontend /login: sin 5xx/timeouts",
+                            "id": "15aeff793d40a84abb6788bdda9d4b49"
+                        },
+                        "frontend /login: ruta existe": {
+                            "name": "frontend /login: ruta existe",
+                            "path": "::frontend::frontend /login: ruta existe",
+                            "id": "43f4dba2b9eb88f5322c8b35cf1ffaa6",
+                            "passes": 168,
+                            "fails": 0
+                        }
+                    }
+            },
+            "auth publico por gateway": {
+                "name": "auth publico por gateway",
+                "path": "::auth publico por gateway",
+                "id": "1e6f3b6c199f970a4008c70b61c9a7b0",
+                "groups": {},
+                "checks": {
+                        "gateway /auth/login OPTIONS: responde 2xx/3xx": {
+                            "fails": 0,
+                            "name": "gateway /auth/login OPTIONS: responde 2xx/3xx",
+                            "path": "::auth publico por gateway::gateway /auth/login OPTIONS: responde 2xx/3xx",
+                            "id": "ca7c8da9799326ebf30859a2c13bbd3b",
+                            "passes": 168
+                        },
+                        "gateway /auth/login OPTIONS: sin 5xx/timeouts": {
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "gateway /auth/login OPTIONS: sin 5xx/timeouts",
+                            "path": "::auth publico por gateway::gateway /auth/login OPTIONS: sin 5xx/timeouts",
+                            "id": "9628ab867e43b2687d3e8faa274ab743"
+                        },
+                        "gateway /auth/login OPTIONS: ruta existe": {
+                            "name": "gateway /auth/login OPTIONS: ruta existe",
+                            "path": "::auth publico por gateway::gateway /auth/login OPTIONS: ruta existe",
+                            "id": "7c46b30317e8d1cf409b539468505772",
+                            "passes": 168,
+                            "fails": 0
+                        }
+                    }
+            },
+            "gateway microservicios GET": {
+                "name": "gateway microservicios GET",
+                "path": "::gateway microservicios GET",
+                "id": "ead5f9363ba78a72e49fc10e4c637d5a",
+                "groups": {},
+                "checks": {
+                        "categorias: 2xx/3xx o auth requerida sin TOKEN": {
+                            "path": "::gateway microservicios GET::categorias: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "1faee9216d71b57a4b45fdc86309ca54",
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "categorias: 2xx/3xx o auth requerida sin TOKEN"
+                        },
+                        "categorias: sin 5xx/timeouts": {
+                            "id": "df9dd9cb1e0dc120e610d6a7fa0bf813",
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "categorias: sin 5xx/timeouts",
+                            "path": "::gateway microservicios GET::categorias: sin 5xx/timeouts"
+                        },
+                        "categorias: ruta existe": {
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "categorias: ruta existe",
+                            "path": "::gateway microservicios GET::categorias: ruta existe",
+                            "id": "1adb1e1426cf59bc9ad82e1c4430e33a"
+                        },
+                        "productos: 2xx/3xx o auth requerida sin TOKEN": {
+                            "fails": 0,
+                            "name": "productos: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::gateway microservicios GET::productos: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "9cd40a573077b6b3795e7651cd1dfa33",
+                            "passes": 168
+                        },
+                        "productos: sin 5xx/timeouts": {
+                            "path": "::gateway microservicios GET::productos: sin 5xx/timeouts",
+                            "id": "48a1e700908a57ebc2bf67b71c259c7d",
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "productos: sin 5xx/timeouts"
+                        },
+                        "productos: ruta existe": {
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "productos: ruta existe",
+                            "path": "::gateway microservicios GET::productos: ruta existe",
+                            "id": "dbd3be3f19e7a4ecc0b9ecc56317beaf"
+                        },
+                        "stock: 2xx/3xx o auth requerida sin TOKEN": {
+                            "id": "b9bf47b7f86b38f1071d9d50066478f6",
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "stock: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::gateway microservicios GET::stock: 2xx/3xx o auth requerida sin TOKEN"
+                        },
+                        "stock: sin 5xx/timeouts": {
+                            "fails": 0,
+                            "name": "stock: sin 5xx/timeouts",
+                            "path": "::gateway microservicios GET::stock: sin 5xx/timeouts",
+                            "id": "edfa10e1ceb5ddf741f894f221b2dd1b",
+                            "passes": 168
+                        },
+                        "stock: ruta existe": {
+                            "fails": 0,
+                            "name": "stock: ruta existe",
+                            "path": "::gateway microservicios GET::stock: ruta existe",
+                            "id": "846bab67cc43cc12bde594cea7ee141a",
+                            "passes": 168
+                        },
+                        "clientes: 2xx/3xx o auth requerida sin TOKEN": {
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "clientes: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::gateway microservicios GET::clientes: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "653ef7969ba8fc73035565252252d616"
+                        },
+                        "clientes: sin 5xx/timeouts": {
+                            "name": "clientes: sin 5xx/timeouts",
+                            "path": "::gateway microservicios GET::clientes: sin 5xx/timeouts",
+                            "id": "e62130b336edb87a02a641f8b042fc62",
+                            "passes": 168,
+                            "fails": 0
+                        },
+                        "clientes: ruta existe": {
+                            "name": "clientes: ruta existe",
+                            "path": "::gateway microservicios GET::clientes: ruta existe",
+                            "id": "abc5a1ec137f45a46ff968b80446dd0e",
+                            "passes": 168,
+                            "fails": 0
+                        },
+                        "proveedores: 2xx/3xx o auth requerida sin TOKEN": {
+                            "name": "proveedores: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::gateway microservicios GET::proveedores: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "042dbf550f14fdc33c08c0d1f07201ac",
+                            "passes": 168,
+                            "fails": 0
+                        },
+                        "proveedores: sin 5xx/timeouts": {
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "proveedores: sin 5xx/timeouts",
+                            "path": "::gateway microservicios GET::proveedores: sin 5xx/timeouts",
+                            "id": "d3ccb6e072f4935ddf58ccd7f368a994"
+                        },
+                        "proveedores: ruta existe": {
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "proveedores: ruta existe",
+                            "path": "::gateway microservicios GET::proveedores: ruta existe",
+                            "id": "abc34ada699eef75afa1349cfe3ecdcf"
+                        },
+                        "compras: 2xx/3xx o auth requerida sin TOKEN": {
+                            "name": "compras: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::gateway microservicios GET::compras: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "773936696b0609ffb96d29e69abee2e9",
+                            "passes": 168,
+                            "fails": 0
+                        },
+                        "compras: sin 5xx/timeouts": {
+                            "name": "compras: sin 5xx/timeouts",
+                            "path": "::gateway microservicios GET::compras: sin 5xx/timeouts",
+                            "id": "808eedded86aa02f314b9af22bdf3eb6",
+                            "passes": 168,
+                            "fails": 0
+                        },
+                        "compras: ruta existe": {
+                            "path": "::gateway microservicios GET::compras: ruta existe",
+                            "id": "483f5177b83add1d9b99f4e8db7fbc56",
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "compras: ruta existe"
+                        },
+                        "ventas: 2xx/3xx o auth requerida sin TOKEN": {
+                            "fails": 0,
+                            "name": "ventas: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::gateway microservicios GET::ventas: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "b70767c811beb44df51bc365b9421f56",
+                            "passes": 168
+                        },
+                        "ventas: sin 5xx/timeouts": {
+                            "name": "ventas: sin 5xx/timeouts",
+                            "path": "::gateway microservicios GET::ventas: sin 5xx/timeouts",
+                            "id": "69bfc6c33a030c295aa99ef4bbb01f0e",
+                            "passes": 168,
+                            "fails": 0
+                        },
+                        "ventas: ruta existe": {
+                            "passes": 168,
+                            "fails": 0,
+                            "name": "ventas: ruta existe",
+                            "path": "::gateway microservicios GET::ventas: ruta existe",
+                            "id": "2821244fe4e5419d9dfe9a4c282337b4"
+                        }
+                    }
+            }
+        },
+        "checks": {
+            "auth login opcional: responde 2xx/3xx": {
+                "fails": 0,
+                "name": "auth login opcional: responde 2xx/3xx",
+                "path": "::auth login opcional: responde 2xx/3xx",
+                "id": "3f328481384cefcdfeb350941faf4d3f",
+                "passes": 3
+            },
+            "auth login opcional: sin 5xx/timeouts": {
+                "id": "284f037ff880ac5673c330a3fa7a2a45",
+                "passes": 3,
+                "fails": 0,
+                "name": "auth login opcional: sin 5xx/timeouts",
+                "path": "::auth login opcional: sin 5xx/timeouts"
+            },
+            "auth login opcional: ruta existe": {
+                "passes": 3,
+                "fails": 0,
+                "name": "auth login opcional: ruta existe",
+                "path": "::auth login opcional: ruta existe",
+                "id": "180b4bca191aacc7bba2451c1f25ac7f"
+            }
+        }
+    },
+    "metrics": {
+        "http_req_sending": {
+            "p(95)": 0,
+            "avg": 0.01638046318289787,
+            "min": 0,
+            "med": 0,
+            "max": 1.5292,
+            "p(90)": 0
+        },
+        "http_req_duration": {
+            "avg": 8.46589590261283,
+            "min": 0,
+            "med": 8.3528,
+            "max": 300.558,
+            "p(90)": 15.0349,
+            "p(95)": 18.88343999999999,
+            "thresholds": {
+                "p(95)<3000": false
+            }
+        },
+        "http_reqs": {
+            "count": 1684,
+            "rate": 27.55915179575081
+        },
+        "http_req_receiving": {
+            "min": 0,
+            "med": 0,
+            "max": 2.0406,
+            "p(90)": 0.9818000000000001,
+            "p(95)": 1.070365,
+            "avg": 0.3549401425178152
+        },
+        "auth_required_responses": {
+            "fails": 1684,
+            "passes": 0,
+            "value": 0
+        },
+        "group_duration": {
+            "p(95)": 89.6485,
+            "avg": 28.44504960317457,
+            "min": 1.0286,
+            "med": 2.79745,
+            "max": 391.9012,
+            "p(90)": 78.96002
+        },
+        "iteration_duration": {
+            "max": 1398.2,
+            "p(90)": 1096.98714,
+            "p(95)": 1102.26465,
+            "avg": 1087.513673214285,
+            "min": 1056.6217,
+            "med": 1079.68345
+        },
+        "server_errors_or_timeouts": {
+            "passes": 336,
+            "fails": 1348,
+            "thresholds": {
+                "rate<0.01": true
+            },
+            "value": 0.1995249406175772
+        },
+        "vus_max": {
+            "value": 3,
+            "min": 3,
+            "max": 3
+        },
+        "http_req_connecting": {
+            "med": 0,
+            "max": 0.5477,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.0012953681710213775,
+            "min": 0
+        },
+        "http_req_failed": {
+            "passes": 336,
+            "fails": 1348,
+            "thresholds": {
+                "rate<0.05": true
+            },
+            "value": 0.1995249406175772
+        },
+        "checks": {
+            "passes": 4380,
+            "fails": 672,
+            "thresholds": {
+                "rate>0.95": true
+            },
+            "value": 0.8669833729216152
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 3
+        },
+        "http_req_tls_handshaking": {
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0
+        },
+        "http_req_waiting": {
+            "p(90)": 14.5763,
+            "p(95)": 18.124905,
+            "avg": 8.09457529691212,
+            "min": 0,
+            "med": 7.923349999999999,
+            "max": 299.2776
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(90)": 16.7187,
+            "p(95)": 19.452779999999994,
+            "avg": 10.576089540059353,
+            "min": 0.5396,
+            "med": 9.0202,
+            "max": 300.558
+        },
+        "data_sent": {
+            "count": 349400,
+            "rate": 5718.0330388570865
+        },
+        "iterations": {
+            "count": 168,
+            "rate": 2.7493690627589884
+        },
+        "data_received": {
+            "count": 656688,
+            "rate": 10746.89089931592
+        },
+        "route_not_found_responses": {
+            "passes": 0,
+            "fails": 1684,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "http_req_blocked": {
+            "min": 0,
+            "med": 0,
+            "max": 13.8168,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.01272013064133017
+        }
+    }
+}

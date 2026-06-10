@@ -1,0 +1,23 @@
+server:
+  port: 7071
+
+spring:
+  application:
+    name: ms-config-server
+
+  cloud:
+    config:
+      import-check:
+        enabled: false
+      server:
+        git:
+          uri: https://github.com/Alexjhona/ProyectoDespliegueDeSoftware2026.git
+          search-paths:
+            - DAD-2025-G2-main/config-data
+          default-label: trabajo-calidad-tests
+          clone-on-start: true
+
+  security:
+    user:
+      name: root
+      password: 123456

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ms-registry-server
+
+  config:
+    import: configserver:http://localhost:7071

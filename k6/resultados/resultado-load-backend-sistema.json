@@ -1,0 +1,431 @@
+{
+    "metrics": {
+        "http_req_connecting": {
+            "min": 0,
+            "med": 0,
+            "max": 34.5064,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.0024767950441398614
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 72157,
+            "value": 0
+        },
+        "checks": {
+            "passes": 216471,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_blocked": {
+            "med": 0,
+            "max": 65.524,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.012711649597405646,
+            "min": 0
+        },
+        "http_req_tls_handshaking": {
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0
+        },
+        "auth_required_responses": {
+            "passes": 0,
+            "fails": 72157,
+            "value": 0
+        },
+        "iteration_duration": {
+            "avg": 2095.3406745420225,
+            "min": 1049.238,
+            "med": 2066.2603,
+            "max": 7767.5371,
+            "p(90)": 2883.3794,
+            "p(95)": 2989.5740499999993
+        },
+        "backend_server_errors_or_timeouts": {
+            "passes": 0,
+            "fails": 72056,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "backend_req_duration": {
+            "max": 1545.8736,
+            "p(90)": 13.3477,
+            "p(95)": 15.406125,
+            "avg": 12.060231098035102,
+            "min": 0.4432,
+            "med": 7.0054,
+            "thresholds": {
+                "p(95)<3000": false
+            }
+        },
+        "route_not_found_responses": {
+            "passes": 0,
+            "fails": 72157,
+            "value": 0
+        },
+        "backend_req_failed": {
+            "passes": 0,
+            "fails": 72056,
+            "thresholds": {
+                "rate<0.05": false
+            },
+            "value": 0
+        },
+        "http_req_waiting": {
+            "min": 0.4432,
+            "med": 6.58,
+            "max": 2668.6593,
+            "p(90)": 12.9458,
+            "p(95)": 15.075579999999999,
+            "avg": 11.56089587843185
+        },
+        "backend_checks": {
+            "passes": 216168,
+            "fails": 0,
+            "thresholds": {
+                "rate>0.95": false
+            },
+            "value": 1
+        },
+        "data_received": {
+            "count": 35140273,
+            "rate": 73059.07619804084
+        },
+        "vus": {
+            "value": 3,
+            "min": 1,
+            "max": 100
+        },
+        "http_req_duration": {
+            "avg": 12.257247050182494,
+            "min": 0.4432,
+            "med": 7.0078,
+            "max": 2758.4821,
+            "p(90)": 13.38024,
+            "p(95)": 15.505659999999999
+        },
+        "group_duration": {
+            "max": 4792.2857,
+            "p(90)": 66.35541,
+            "p(95)": 75.34988499999999,
+            "avg": 49.75666463861431,
+            "min": 0.4432,
+            "med": 48.090450000000004
+        },
+        "http_reqs": {
+            "count": 72157,
+            "rate": 150.01943101643045
+        },
+        "http_req_sending": {
+            "med": 0,
+            "max": 62.1148,
+            "p(90)": 0,
+            "p(95)": 0.5051,
+            "avg": 0.04306084232991985,
+            "min": 0
+        },
+        "vus_max": {
+            "value": 100,
+            "min": 100,
+            "max": 100
+        },
+        "backend_route_not_found_responses": {
+            "passes": 0,
+            "fails": 72056,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "iterations": {
+            "rate": 18.72618062232339,
+            "count": 9007
+        },
+        "server_errors_or_timeouts": {
+            "passes": 0,
+            "fails": 72157,
+            "value": 0
+        },
+        "data_sent": {
+            "count": 18709725,
+            "rate": 38898.821998889696
+        },
+        "backend_auth_required_responses": {
+            "fails": 72056,
+            "passes": 0,
+            "value": 0
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(95)": 15.505659999999999,
+            "avg": 12.257247050182494,
+            "min": 0.4432,
+            "med": 7.0078,
+            "max": 2758.4821,
+            "p(90)": 13.38024
+        },
+        "http_req_receiving": {
+            "min": 0,
+            "med": 0.3861,
+            "max": 352.2119,
+            "p(90)": 1.0003,
+            "p(95)": 1.2113,
+            "avg": 0.6532903294205704
+        }
+    },
+    "setup_data": {
+        "authConfigured": true,
+        "autoLoginValidated": true,
+        "tokenFromEnv": false
+    },
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "setup": {
+                "groups": {},
+                "checks": {
+                        "auth login opcional: responde 2xx/3xx": {
+                            "name": "auth login opcional: responde 2xx/3xx",
+                            "path": "::setup::auth login opcional: responde 2xx/3xx",
+                            "id": "d86c4add1104d0bc7cc6825cbc04c825",
+                            "passes": 1,
+                            "fails": 0
+                        },
+                        "auth login opcional: sin 5xx/timeouts": {
+                            "name": "auth login opcional: sin 5xx/timeouts",
+                            "path": "::setup::auth login opcional: sin 5xx/timeouts",
+                            "id": "6bb44f64048fbe6d368d6cc54b3fcd68",
+                            "passes": 1,
+                            "fails": 0
+                        },
+                        "auth login opcional: ruta existe": {
+                            "path": "::setup::auth login opcional: ruta existe",
+                            "id": "46b5b1cf718402fe40d2566e117c9a94",
+                            "passes": 1,
+                            "fails": 0,
+                            "name": "auth login opcional: ruta existe"
+                        }
+                    },
+                "name": "setup",
+                "path": "::setup",
+                "id": "5c0f8025f7e0b6654089e5b00e950f1a"
+            },
+            "auth publico por gateway": {
+                "name": "auth publico por gateway",
+                "path": "::auth publico por gateway",
+                "id": "1e6f3b6c199f970a4008c70b61c9a7b0",
+                "groups": {},
+                "checks": {
+                        "gateway /auth/login OPTIONS: responde 2xx/3xx": {
+                            "name": "gateway /auth/login OPTIONS: responde 2xx/3xx",
+                            "path": "::auth publico por gateway::gateway /auth/login OPTIONS: responde 2xx/3xx",
+                            "id": "ca7c8da9799326ebf30859a2c13bbd3b",
+                            "passes": 9007,
+                            "fails": 0
+                        },
+                        "gateway /auth/login OPTIONS: sin 5xx/timeouts": {
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "gateway /auth/login OPTIONS: sin 5xx/timeouts",
+                            "path": "::auth publico por gateway::gateway /auth/login OPTIONS: sin 5xx/timeouts",
+                            "id": "9628ab867e43b2687d3e8faa274ab743"
+                        },
+                        "gateway /auth/login OPTIONS: ruta existe": {
+                            "name": "gateway /auth/login OPTIONS: ruta existe",
+                            "path": "::auth publico por gateway::gateway /auth/login OPTIONS: ruta existe",
+                            "id": "7c46b30317e8d1cf409b539468505772",
+                            "passes": 9007,
+                            "fails": 0
+                        }
+                    }
+            },
+            "backend completo por gateway": {
+                "groups": {},
+                "checks": {
+                        "categorias: 2xx/3xx o auth requerida sin TOKEN": {
+                            "fails": 0,
+                            "name": "categorias: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::backend completo por gateway::categorias: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "f84dd716839d46ed74fa3606965f902b",
+                            "passes": 9007
+                        },
+                        "categorias: sin 5xx/timeouts": {
+                            "path": "::backend completo por gateway::categorias: sin 5xx/timeouts",
+                            "id": "78fea5e8ef43741bd0919476982de718",
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "categorias: sin 5xx/timeouts"
+                        },
+                        "categorias: ruta existe": {
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "categorias: ruta existe",
+                            "path": "::backend completo por gateway::categorias: ruta existe",
+                            "id": "49c595acf3aef00053c6938649c711fa"
+                        },
+                        "productos: 2xx/3xx o auth requerida sin TOKEN": {
+                            "path": "::backend completo por gateway::productos: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "ea5148c9f7a7652aae6c984899758b56",
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "productos: 2xx/3xx o auth requerida sin TOKEN"
+                        },
+                        "productos: sin 5xx/timeouts": {
+                            "name": "productos: sin 5xx/timeouts",
+                            "path": "::backend completo por gateway::productos: sin 5xx/timeouts",
+                            "id": "53dfcb5cbad3e3ee4786e0bfbce14942",
+                            "passes": 9007,
+                            "fails": 0
+                        },
+                        "productos: ruta existe": {
+                            "path": "::backend completo por gateway::productos: ruta existe",
+                            "id": "b834652f5abc7aebbc12906901f07a2a",
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "productos: ruta existe"
+                        },
+                        "stock: 2xx/3xx o auth requerida sin TOKEN": {
+                            "fails": 0,
+                            "name": "stock: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::backend completo por gateway::stock: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "8f5a363441fff91b5042951bf9447d72",
+                            "passes": 9007
+                        },
+                        "stock: sin 5xx/timeouts": {
+                            "name": "stock: sin 5xx/timeouts",
+                            "path": "::backend completo por gateway::stock: sin 5xx/timeouts",
+                            "id": "7327e85a0b18325a16a059f748ff347d",
+                            "passes": 9007,
+                            "fails": 0
+                        },
+                        "stock: ruta existe": {
+                            "name": "stock: ruta existe",
+                            "path": "::backend completo por gateway::stock: ruta existe",
+                            "id": "2e6db5567ff6af63b970ceeb58237f6c",
+                            "passes": 9007,
+                            "fails": 0
+                        },
+                        "clientes: 2xx/3xx o auth requerida sin TOKEN": {
+                            "name": "clientes: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::backend completo por gateway::clientes: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "1c001728ac316d753136513a93668e7b",
+                            "passes": 9007,
+                            "fails": 0
+                        },
+                        "clientes: sin 5xx/timeouts": {
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "clientes: sin 5xx/timeouts",
+                            "path": "::backend completo por gateway::clientes: sin 5xx/timeouts",
+                            "id": "ee925160e8c3cbcd6200d6ac4282f7bd"
+                        },
+                        "clientes: ruta existe": {
+                            "name": "clientes: ruta existe",
+                            "path": "::backend completo por gateway::clientes: ruta existe",
+                            "id": "66e165db8d52f99955216b1e58e682d1",
+                            "passes": 9007,
+                            "fails": 0
+                        },
+                        "proveedores: 2xx/3xx o auth requerida sin TOKEN": {
+                            "id": "43cd13f43cf61112ff53df49095da886",
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "proveedores: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::backend completo por gateway::proveedores: 2xx/3xx o auth requerida sin TOKEN"
+                        },
+                        "proveedores: sin 5xx/timeouts": {
+                            "fails": 0,
+                            "name": "proveedores: sin 5xx/timeouts",
+                            "path": "::backend completo por gateway::proveedores: sin 5xx/timeouts",
+                            "id": "34334fbe90d0f2147364e9fe4aa24234",
+                            "passes": 9007
+                        },
+                        "proveedores: ruta existe": {
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "proveedores: ruta existe",
+                            "path": "::backend completo por gateway::proveedores: ruta existe",
+                            "id": "b40a03870021e579eaa0ffb2a917306d"
+                        },
+                        "compras: 2xx/3xx o auth requerida sin TOKEN": {
+                            "name": "compras: 2xx/3xx o auth requerida sin TOKEN",
+                            "path": "::backend completo por gateway::compras: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "1a82d07a7a33062b11eec120d6477d54",
+                            "passes": 9007,
+                            "fails": 0
+                        },
+                        "compras: sin 5xx/timeouts": {
+                            "name": "compras: sin 5xx/timeouts",
+                            "path": "::backend completo por gateway::compras: sin 5xx/timeouts",
+                            "id": "78a7324ac705fc2b8640d1949606e3a9",
+                            "passes": 9007,
+                            "fails": 0
+                        },
+                        "compras: ruta existe": {
+                            "fails": 0,
+                            "name": "compras: ruta existe",
+                            "path": "::backend completo por gateway::compras: ruta existe",
+                            "id": "2d2632d111b85735a43f0cf0066c0317",
+                            "passes": 9007
+                        },
+                        "ventas: 2xx/3xx o auth requerida sin TOKEN": {
+                            "path": "::backend completo por gateway::ventas: 2xx/3xx o auth requerida sin TOKEN",
+                            "id": "d5c08f31d5ec09d9eae5ca95d6da56e3",
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "ventas: 2xx/3xx o auth requerida sin TOKEN"
+                        },
+                        "ventas: sin 5xx/timeouts": {
+                            "name": "ventas: sin 5xx/timeouts",
+                            "path": "::backend completo por gateway::ventas: sin 5xx/timeouts",
+                            "id": "0e3a7009c8c7e5850d4c927c9dd64314",
+                            "passes": 9007,
+                            "fails": 0
+                        },
+                        "ventas: ruta existe": {
+                            "path": "::backend completo por gateway::ventas: ruta existe",
+                            "id": "e5a5b8ebc1632f1ef0a15a2d0e1dd928",
+                            "passes": 9007,
+                            "fails": 0,
+                            "name": "ventas: ruta existe"
+                        }
+                    },
+                "name": "backend completo por gateway",
+                "path": "::backend completo por gateway",
+                "id": "c64d2f1f720ec58dae866dc55e651a34"
+            }
+        },
+        "checks": {
+            "auth login opcional: responde 2xx/3xx": {
+                "name": "auth login opcional: responde 2xx/3xx",
+                "path": "::auth login opcional: responde 2xx/3xx",
+                "id": "3f328481384cefcdfeb350941faf4d3f",
+                "passes": 100,
+                "fails": 0
+            },
+            "auth login opcional: sin 5xx/timeouts": {
+                "name": "auth login opcional: sin 5xx/timeouts",
+                "path": "::auth login opcional: sin 5xx/timeouts",
+                "id": "284f037ff880ac5673c330a3fa7a2a45",
+                "passes": 100,
+                "fails": 0
+            },
+            "auth login opcional: ruta existe": {
+                "name": "auth login opcional: ruta existe",
+                "path": "::auth login opcional: ruta existe",
+                "id": "180b4bca191aacc7bba2451c1f25ac7f",
+                "passes": 100,
+                "fails": 0
+            }
+        },
+        "name": "",
+        "path": ""
+    }
+}

@@ -1,0 +1,432 @@
+{
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "setup": {
+                "checks": {
+                    "auth login opcional: responde 2xx/3xx": {
+                        "passes": 1,
+                        "fails": 0,
+                        "name": "auth login opcional: responde 2xx/3xx",
+                        "path": "::setup::auth login opcional: responde 2xx/3xx",
+                        "id": "d86c4add1104d0bc7cc6825cbc04c825"
+                    },
+                    "auth login opcional: sin 5xx/timeouts": {
+                        "name": "auth login opcional: sin 5xx/timeouts",
+                        "path": "::setup::auth login opcional: sin 5xx/timeouts",
+                        "id": "6bb44f64048fbe6d368d6cc54b3fcd68",
+                        "passes": 1,
+                        "fails": 0
+                    },
+                    "auth login opcional: ruta existe": {
+                        "passes": 1,
+                        "fails": 0,
+                        "name": "auth login opcional: ruta existe",
+                        "path": "::setup::auth login opcional: ruta existe",
+                        "id": "46b5b1cf718402fe40d2566e117c9a94"
+                    }
+                },
+                "name": "setup",
+                "path": "::setup",
+                "id": "5c0f8025f7e0b6654089e5b00e950f1a",
+                "groups": {}
+            },
+            "flujo usuario sistema completo": {
+                "checks": {
+                    "frontend login: responde 2xx/3xx": {
+                        "id": "efae045b2f8e69e5e5252a32f2cf67b8",
+                        "passes": 0,
+                        "fails": 7466,
+                        "name": "frontend login: responde 2xx/3xx",
+                        "path": "::flujo usuario sistema completo::frontend login: responde 2xx/3xx"
+                    },
+                    "frontend login: sin 5xx/timeouts": {
+                        "name": "frontend login: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::frontend login: sin 5xx/timeouts",
+                        "id": "3a2746fb9c4ee78cff1c2736c323af07",
+                        "passes": 0,
+                        "fails": 7466
+                    },
+                    "frontend login: ruta existe": {
+                        "name": "frontend login: ruta existe",
+                        "path": "::flujo usuario sistema completo::frontend login: ruta existe",
+                        "id": "0c6431e1c3974ef6182cd686685ae084",
+                        "passes": 7466,
+                        "fails": 0
+                    },
+                    "frontend dashboard: responde 2xx/3xx": {
+                        "fails": 7466,
+                        "name": "frontend dashboard: responde 2xx/3xx",
+                        "path": "::flujo usuario sistema completo::frontend dashboard: responde 2xx/3xx",
+                        "id": "48c16ba5fdf00d87da0486525dce5278",
+                        "passes": 0
+                    },
+                    "frontend dashboard: sin 5xx/timeouts": {
+                        "id": "89cede7d127fb9149e0569d7699c7795",
+                        "passes": 0,
+                        "fails": 7466,
+                        "name": "frontend dashboard: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::frontend dashboard: sin 5xx/timeouts"
+                    },
+                    "frontend dashboard: ruta existe": {
+                        "path": "::flujo usuario sistema completo::frontend dashboard: ruta existe",
+                        "id": "f3ef05e6b59981e8bfafde7f71a3f1b6",
+                        "passes": 7466,
+                        "fails": 0,
+                        "name": "frontend dashboard: ruta existe"
+                    },
+                    "auth login por gateway: responde 2xx/3xx": {
+                        "passes": 7466,
+                        "fails": 0,
+                        "name": "auth login por gateway: responde 2xx/3xx",
+                        "path": "::flujo usuario sistema completo::auth login por gateway: responde 2xx/3xx",
+                        "id": "65e0c4ff70860a088c5147b377f314e5"
+                    },
+                    "auth login por gateway: sin 5xx/timeouts": {
+                        "name": "auth login por gateway: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::auth login por gateway: sin 5xx/timeouts",
+                        "id": "f3712c560f5f2fdcd6df148294627aca",
+                        "passes": 7466,
+                        "fails": 0
+                    },
+                    "auth login por gateway: ruta existe": {
+                        "passes": 7466,
+                        "fails": 0,
+                        "name": "auth login por gateway: ruta existe",
+                        "path": "::flujo usuario sistema completo::auth login por gateway: ruta existe",
+                        "id": "0fc943f64f285b20dd8e2bc551d6ee47"
+                    },
+                    "listar categorias: 2xx/3xx o auth requerida sin TOKEN": {
+                        "name": "listar categorias: 2xx/3xx o auth requerida sin TOKEN",
+                        "path": "::flujo usuario sistema completo::listar categorias: 2xx/3xx o auth requerida sin TOKEN",
+                        "id": "f488a314e4f5ae77ae9ea0b4a3fe86d0",
+                        "passes": 7459,
+                        "fails": 7
+                    },
+                    "listar categorias: sin 5xx/timeouts": {
+                        "name": "listar categorias: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::listar categorias: sin 5xx/timeouts",
+                        "id": "3d448eb8a778e454a5288a9585ad044e",
+                        "passes": 7459,
+                        "fails": 7
+                    },
+                    "listar categorias: ruta existe": {
+                        "name": "listar categorias: ruta existe",
+                        "path": "::flujo usuario sistema completo::listar categorias: ruta existe",
+                        "id": "2b867c33c4dc8001e942b78beb6bb09c",
+                        "passes": 7466,
+                        "fails": 0
+                    },
+                    "listar productos: 2xx/3xx o auth requerida sin TOKEN": {
+                        "passes": 7446,
+                        "fails": 20,
+                        "name": "listar productos: 2xx/3xx o auth requerida sin TOKEN",
+                        "path": "::flujo usuario sistema completo::listar productos: 2xx/3xx o auth requerida sin TOKEN",
+                        "id": "8c76331c847ecd6e09f8dc78eb7360fc"
+                    },
+                    "listar productos: sin 5xx/timeouts": {
+                        "id": "28a359edb630086e9e02873dbc107903",
+                        "passes": 7446,
+                        "fails": 20,
+                        "name": "listar productos: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::listar productos: sin 5xx/timeouts"
+                    },
+                    "listar productos: ruta existe": {
+                        "path": "::flujo usuario sistema completo::listar productos: ruta existe",
+                        "id": "1b27fddba6e70bb2c59bb9ce2e8a9b44",
+                        "passes": 7466,
+                        "fails": 0,
+                        "name": "listar productos: ruta existe"
+                    },
+                    "listar stock: 2xx/3xx o auth requerida sin TOKEN": {
+                        "name": "listar stock: 2xx/3xx o auth requerida sin TOKEN",
+                        "path": "::flujo usuario sistema completo::listar stock: 2xx/3xx o auth requerida sin TOKEN",
+                        "id": "305be28e4156b070a64d36636c9373f3",
+                        "passes": 7466,
+                        "fails": 0
+                    },
+                    "listar stock: sin 5xx/timeouts": {
+                        "name": "listar stock: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::listar stock: sin 5xx/timeouts",
+                        "id": "9a77244a565caec3edfca843887fa2f4",
+                        "passes": 7466,
+                        "fails": 0
+                    },
+                    "listar stock: ruta existe": {
+                        "path": "::flujo usuario sistema completo::listar stock: ruta existe",
+                        "id": "b82da4a746eeaea1a64e8271ebdd885d",
+                        "passes": 7466,
+                        "fails": 0,
+                        "name": "listar stock: ruta existe"
+                    },
+                    "listar clientes: 2xx/3xx o auth requerida sin TOKEN": {
+                        "id": "c2af8db590cfb9eedf0672f593e63454",
+                        "passes": 7465,
+                        "fails": 1,
+                        "name": "listar clientes: 2xx/3xx o auth requerida sin TOKEN",
+                        "path": "::flujo usuario sistema completo::listar clientes: 2xx/3xx o auth requerida sin TOKEN"
+                    },
+                    "listar clientes: sin 5xx/timeouts": {
+                        "id": "a76c860261fabe0222377accb704c777",
+                        "passes": 7465,
+                        "fails": 1,
+                        "name": "listar clientes: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::listar clientes: sin 5xx/timeouts"
+                    },
+                    "listar clientes: ruta existe": {
+                        "fails": 0,
+                        "name": "listar clientes: ruta existe",
+                        "path": "::flujo usuario sistema completo::listar clientes: ruta existe",
+                        "id": "489dad829cf1c694966fca22eb300b37",
+                        "passes": 7466
+                    },
+                    "listar proveedores: 2xx/3xx o auth requerida sin TOKEN": {
+                        "fails": 0,
+                        "name": "listar proveedores: 2xx/3xx o auth requerida sin TOKEN",
+                        "path": "::flujo usuario sistema completo::listar proveedores: 2xx/3xx o auth requerida sin TOKEN",
+                        "id": "ec71001eba02e645d6dafd922ee09e8a",
+                        "passes": 7466
+                    },
+                    "listar proveedores: sin 5xx/timeouts": {
+                        "name": "listar proveedores: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::listar proveedores: sin 5xx/timeouts",
+                        "id": "bf546f8f05666e02f0aefdad21067c5f",
+                        "passes": 7466,
+                        "fails": 0
+                    },
+                    "listar proveedores: ruta existe": {
+                        "name": "listar proveedores: ruta existe",
+                        "path": "::flujo usuario sistema completo::listar proveedores: ruta existe",
+                        "id": "f70f7e6aac56631230712bd31ef59bbe",
+                        "passes": 7466,
+                        "fails": 0
+                    },
+                    "listar compras: 2xx/3xx o auth requerida sin TOKEN": {
+                        "passes": 7461,
+                        "fails": 5,
+                        "name": "listar compras: 2xx/3xx o auth requerida sin TOKEN",
+                        "path": "::flujo usuario sistema completo::listar compras: 2xx/3xx o auth requerida sin TOKEN",
+                        "id": "52c920f7d179099d291765399412ec8a"
+                    },
+                    "listar compras: sin 5xx/timeouts": {
+                        "name": "listar compras: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::listar compras: sin 5xx/timeouts",
+                        "id": "a9abba0a1451d079a21380c00201a830",
+                        "passes": 7461,
+                        "fails": 5
+                    },
+                    "listar compras: ruta existe": {
+                        "id": "17ebe2d63aa8af2608bd9c203e4d959a",
+                        "passes": 7466,
+                        "fails": 0,
+                        "name": "listar compras: ruta existe",
+                        "path": "::flujo usuario sistema completo::listar compras: ruta existe"
+                    },
+                    "listar ventas: 2xx/3xx o auth requerida sin TOKEN": {
+                        "name": "listar ventas: 2xx/3xx o auth requerida sin TOKEN",
+                        "path": "::flujo usuario sistema completo::listar ventas: 2xx/3xx o auth requerida sin TOKEN",
+                        "id": "f9e97efdd0b46f311b7db6ec25088fcc",
+                        "passes": 7452,
+                        "fails": 14
+                    },
+                    "listar ventas: sin 5xx/timeouts": {
+                        "name": "listar ventas: sin 5xx/timeouts",
+                        "path": "::flujo usuario sistema completo::listar ventas: sin 5xx/timeouts",
+                        "id": "dff59bbf31028fb0371da30ff5aa866e",
+                        "passes": 7452,
+                        "fails": 14
+                    },
+                    "listar ventas: ruta existe": {
+                        "name": "listar ventas: ruta existe",
+                        "path": "::flujo usuario sistema completo::listar ventas: ruta existe",
+                        "id": "5b3b6b3618ef88af784e70a4ed88168e",
+                        "passes": 7466,
+                        "fails": 0
+                    }
+                },
+                "name": "flujo usuario sistema completo",
+                "path": "::flujo usuario sistema completo",
+                "id": "c91088ce65281717f20c1bfd0e00cd0d",
+                "groups": {}
+            }
+        },
+        "checks": {
+            "auth login opcional: responde 2xx/3xx": {
+                "name": "auth login opcional: responde 2xx/3xx",
+                "path": "::auth login opcional: responde 2xx/3xx",
+                "id": "3f328481384cefcdfeb350941faf4d3f",
+                "passes": 100,
+                "fails": 0
+            },
+            "auth login opcional: sin 5xx/timeouts": {
+                "name": "auth login opcional: sin 5xx/timeouts",
+                "path": "::auth login opcional: sin 5xx/timeouts",
+                "id": "284f037ff880ac5673c330a3fa7a2a45",
+                "passes": 100,
+                "fails": 0
+            },
+            "auth login opcional: ruta existe": {
+                "fails": 0,
+                "name": "auth login opcional: ruta existe",
+                "path": "::auth login opcional: ruta existe",
+                "id": "180b4bca191aacc7bba2451c1f25ac7f",
+                "passes": 100
+            }
+        },
+        "name": ""
+    },
+    "metrics": {
+        "server_errors_or_timeouts": {
+            "passes": 14979,
+            "fails": 59782,
+            "thresholds": {
+                "rate<0.01": true
+            },
+            "value": 0.20035847567582027
+        },
+        "http_req_tls_handshaking": {
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0
+        },
+        "http_req_receiving": {
+            "min": 0,
+            "med": 0,
+            "max": 10122.729,
+            "p(90)": 1.1624,
+            "p(95)": 1.5667,
+            "avg": 0.9287976498441647
+        },
+        "http_req_failed": {
+            "passes": 14979,
+            "fails": 59782,
+            "thresholds": {
+                "rate<0.05": true
+            },
+            "value": 0.20035847567582027
+        },
+        "http_reqs": {
+            "rate": 138.06814697128254,
+            "count": 74761
+        },
+        "http_req_sending": {
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.045141461457176936,
+            "min": 0,
+            "med": 0,
+            "max": 68.1538
+        },
+        "group_duration": {
+            "med": 220.88619999999997,
+            "max": 11840.1519,
+            "p(90)": 1528.6477,
+            "p(95)": 2033.81575,
+            "avg": 719.0247793463711,
+            "min": 90.2734
+        },
+        "data_received": {
+            "rate": 53763.27768705182,
+            "count": 29111685
+        },
+        "route_not_found_responses": {
+            "passes": 0,
+            "fails": 74761,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "http_req_blocked": {
+            "max": 9667.3712,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.46583635050360456,
+            "min": 0,
+            "med": 0
+        },
+        "checks": {
+            "passes": 194325,
+            "fails": 29958,
+            "thresholds": {
+                "rate>0.95": true
+            },
+            "value": 0.8664276828827865
+        },
+        "http_req_duration": {
+            "avg": 25.635674061342204,
+            "min": 0,
+            "med": 13.1916,
+            "max": 10271.45,
+            "p(90)": 40.1605,
+            "p(95)": 54.9338,
+            "thresholds": {
+                "p(95)<3000": false
+            }
+        },
+        "auth_required_responses": {
+            "passes": 0,
+            "fails": 74761,
+            "value": 0
+        },
+        "iteration_duration": {
+            "p(90)": 4413.9310000000005,
+            "p(95)": 5113.770175000001,
+            "avg": 3217.180600870615,
+            "min": 1110.0536,
+            "med": 3016.59895,
+            "max": 15435.4266
+        },
+        "data_sent": {
+            "count": 15512150,
+            "rate": 28647.741550281302
+        },
+        "vus": {
+            "max": 100,
+            "value": 1,
+            "min": 1
+        },
+        "iterations": {
+            "count": 7466,
+            "rate": 13.788162080330594
+        },
+        "http_req_connecting": {
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.4538054787924185,
+            "min": 0,
+            "med": 0,
+            "max": 9667.3712
+        },
+        "http_req_duration{expected_response:true}": {
+            "avg": 24.07446495935241,
+            "min": 2.1521,
+            "med": 16.02825,
+            "max": 10155.0183,
+            "p(90)": 44.16894,
+            "p(95)": 59.539434999999976
+        },
+        "http_req_waiting": {
+            "med": 12.5571,
+            "max": 10271.45,
+            "p(90)": 38.7613,
+            "p(95)": 53.1312,
+            "avg": 24.66173495004061,
+            "min": 0
+        },
+        "vus_max": {
+            "value": 100,
+            "min": 100,
+            "max": 100
+        }
+    },
+    "setup_data": {
+        "authConfigured": true,
+        "autoLoginValidated": true,
+        "tokenFromEnv": false
+    }
+}
